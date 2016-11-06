@@ -1,34 +1,30 @@
 source 'https://rubygems.org'
-gem 'rails', '3.2.3'
-gem 'bootstrap-sass', '2.2.2'
-gem 'bcrypt-ruby', '3.0.1'
-gem 'faker', '1.0.1'
-gem 'will_paginate', '3.0.3'
-gem 'bootstrap-will_paginate', '0.0.6'
+gem 'rails', '4.1.14.2'
+gem 'bootstrap-sass'
+gem 'bcrypt-ruby'
+gem 'faker'
+gem 'will_paginate'
+gem 'bootstrap-will_paginate'
+gem 'pg'
 group :development do
-	gem 'sqlite3', '1.3.5'
-	gem 'rspec-rails', '2.9.0'
-	gem 'guard-rspec', '0.5.5'
-	gem 'annotate', '~> 2.4.1.beta'
+	gem 'rspec-rails'
+	gem 'guard-rspec'
+	# gem 'annotate'
 end
 # Gems used only for assets and not required
 # in production environments by default.
 group :assets do
-	gem 'sass-rails', '3.2.4'
-	gem 'coffee-rails', '3.2.2'
-	gem 'uglifier', '1.2.3'
+	gem 'sass-rails'
+	gem 'coffee-rails'
+	gem 'uglifier'
 end
 gem 'jquery-rails'
 group :test do
-	gem 'rspec-rails', '2.9.0'
-	gem 'capybara', '1.1.2'
-	gem 'rb-fchange', '0.0.5'
-	gem 'rb-notifu', '0.0.4'
-	gem 'win32console', '1.3.0'
-	gem 'guard-spork', '0.3.2'
-	gem 'spork', '0.9.0'
-	gem 'factory_girl_rails', '1.4.0'
-end
-group :production do
-	gem 'pg', '0.12.2'
+	gem 'rspec-rails'
+	gem 'capybara'
+	gem 'rb-fchange'
+	gem 'rb-notifu'
+	gem 'guard-spork'
+	gem 'spork'
+	gem 'factory_girl_rails'
 end

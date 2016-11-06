@@ -13,7 +13,7 @@
 //= require jquery
 //= require jquery_ujs
 //= require bootstrap
-//= require bootstrap-dropdown
+// require bootstrap-dropdown
 //= require custom.js
 //= require_tree .
 
