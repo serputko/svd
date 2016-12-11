@@ -10,7 +10,7 @@
 #
 
  class User < ActiveRecord::Base
-   attr_accessor :email, :name, :password, :password_confirmation
+   attr_accessor :password_confirmation
 
    has_secure_password
 
@@ -52,9 +52,7 @@
 
    private
 
-
-
    def create_remember_token
-      self.remember_token = SecureRandom.urlsafe_base64
+     self.remember_token = SecureRandom.urlsafe_base64
    end
 end

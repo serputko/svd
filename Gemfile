@@ -7,8 +7,8 @@ gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'pg'
 group :development do
-	gem 'rspec-rails'
-	gem 'guard-rspec'
+	# gem 'rspec-rails'
+	# gem 'guard-rspec'
 	# gem 'annotate'
 end
 # Gems used only for assets and not required
@@ -22,9 +22,9 @@ gem 'jquery-rails'
 group :test do
 	gem 'rspec-rails'
 	gem 'capybara'
-	gem 'rb-fchange'
-	gem 'rb-notifu'
-	gem 'guard-spork'
-	gem 'spork'
+	#gem 'rb-fchange'
+	#gem 'rb-notifu'
+	#gem 'guard-spork'
+	#gem 'spork'
 	gem 'factory_girl_rails'
 end

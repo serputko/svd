@@ -67,13 +67,12 @@ p {
   color: #000;
   text-transform: uppercase;
   letter-spacing: -1px;
-  padding-top: 9px;
   font-weight: bold;
-  line-height: 1;
-  &:hover {
-    color: #222;
-    text-decoration: none;
-  }
+}
+
+#logo:hover {
+  color: #999!important;
+  text-decoration: none;
 }
 
 
