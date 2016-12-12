@@ -6,6 +6,7 @@ gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'pg'
+
 group :development do
 	# gem 'rspec-rails'
 	# gem 'guard-rspec'

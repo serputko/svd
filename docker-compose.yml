@@ -1,0 +1,19 @@
+postgres:
+  image: postgres:9.4.5
+  environment:
+    POSTGRES_USER: svdlab
+    POSTGRES_PASSWORD: 123456789
+  ports:
+    - '5435'
+  volumes:
+    - svdlab-postgres:/var/lib/postgresql/data
+
+svdlab:
+  build: .
+  command: 'rails server'
+  links:
+    - postgres
+  volumes:
+    - .:/study/svd
+  ports:
+    - '3000:3000'
