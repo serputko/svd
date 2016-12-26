@@ -100,6 +100,7 @@ describe User do
     before { @user.password = @user.password_confirmation = "a" * 5 }
     it { should be_invalid }
   end
+
   describe "return value of authenticate method" do
     before { @user.save }
     let(:found_user) { User.find_by_email(@user.email) }
@@ -110,6 +111,15 @@ describe User do
       let(:user_for_invalid_password) { found_user.authenticate("invalid") }
       it { should_not == user_for_invalid_password }
         specify { user_for_invalid_password.should be_false }
+    end
+  end
+
+  describe "#feed" do
+    it 'should return feed for user' do
+      success = double('feed')
+      allow_any_inctance_of(Micropost).to receive(:from_users_followed_by).and_return(success)
+      feed = @user.feed
+      expect(feed).to eq success
     end
   end
 
