@@ -100,6 +100,11 @@ describe User do
     before { @user.password = @user.password_confirmation = "a" * 5 }
     it { should be_invalid }
   end
+  
+  describe "when a password is too long" do
+    before { @user.password = @user.password_confirmation = "a" * 52 }
+    it { should_not be_valid }
+  end
 
   describe "return value of authenticate method" do
     before { @user.save }
