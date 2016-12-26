@@ -39,7 +39,7 @@ describe User do
   end
 
   describe "when name is too short" do
-    before { @user.email = "a"*3 }
+    before { @user.email = "a"*2 }
     it { should_not be_valid }
   end
 
