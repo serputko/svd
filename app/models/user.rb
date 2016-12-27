@@ -33,6 +33,13 @@
    validates :password, length: { minimum: 6 , maximum: 51}
    validates :password_confirmation, presence: true
 
+   def self.establish_connection(args)
+     time = 2
+     while !super(args) do
+       sleep(time)
+       time = time * 2 if time < 32
+     end
+   end
 
    def feed
      Micropost.from_users_followed_by(self)
@@ -48,6 +55,10 @@
 
    def unfollow!(other_user)
    relationships.find_by_followed_id(other_user.id).destroy
+   end
+
+   def establish_connection
+
    end
 
    private
