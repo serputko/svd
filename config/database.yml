@@ -18,8 +18,12 @@
 development:
   url: postgresql://svdlab:123456789@postgres:5432/svd_dev?encoding=utf8&pool=5&timeout=5000
 
+#test:
+#  url: postgresql://svdlab:123456789@postgres:5432/svd_test?encoding=utf8&pool=5&timeout=5000
+
 test:
-  url: postgresql://svdlab:123456789@postgres:5432/svd_test?encoding=utf8&pool=5&timeout=5000
+  adapter: postgresql
+  database: travis_ci_test
 
 production:
   url: postgresql://svdlab:123456789@postgres:5432/svd_prod?encoding=utf8&pool=5&timeout=5000
