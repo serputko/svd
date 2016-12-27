@@ -26,6 +26,6 @@ group :test do
 	#gem 'rb-fchange'
 	#gem 'rb-notifu'
 	#gem 'guard-spork'
-	#gem 'spork'
+	gem 'spork'
 	gem 'factory_girl_rails'
 end
