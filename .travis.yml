@@ -1,5 +1,3 @@
-sudo: required
-
 language: ruby
 rvm:
   - 2.2.3
@@ -10,9 +8,9 @@ services:
 env:
   DOCKER_COMPOSE_VERSION: 1.4.2
 
- before_install: 
-- docker volume create --name svdlab-postgres
-- docker-compose build
-- docker-compose run --user "$(id -u):$(id -g)" svdlab rake db:reset
-- docker-compose run --user "$(id -u):$(id -g)" svdlab rake db:migrate
-- docker-compose up
+before_install:
+  - docker volume create --name svdlab-postgres
+  - docker-compose build
+  - docker-compose run --user "$(id -u):$(id -g)" svdlab rake db:reset
+  - docker-compose run --user "$(id -u):$(id -g)" svdlab rake db:migrate
+  - docker-compose up
