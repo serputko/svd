@@ -6,7 +6,7 @@ gem 'faker'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 gem 'pg'
-
+gem 'rake'
 group :development do
 	# gem 'rspec-rails'
 	# gem 'guard-rspec'
@@ -26,6 +26,6 @@ group :test do
 	#gem 'rb-fchange'
 	#gem 'rb-notifu'
 	#gem 'guard-spork'
-	#gem 'spork'
+	gem 'spork'
 	gem 'factory_girl_rails'
 end
